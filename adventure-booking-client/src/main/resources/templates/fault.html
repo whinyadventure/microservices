@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Fault</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Error occurred</h1>
+    <p th:text="${fault.message}" />
+    <a href="/booking">Submit another booking</a>
+    <a href="/booking/payment">Get payment information</a>
+</body>
+</html>

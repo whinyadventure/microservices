@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Result of adventure booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+	<h2>Payment information:</h2>
+	<div>
+		<p th:text="'Transaction ID: ' + ${paymentResponse.transactionId}" />
+		<p th:text="'Date: ' + ${paymentResponse.transactionDate}" />
+		<p th:text="'Cost: ' + ${paymentResponse.cost}" />
+		<p th:text="'Credit card type: ' + ${paymentResponse.paymentCard.name}" />
+		<p th:text="'Credit card valid to: ' + ${paymentResponse.paymentCard.validTo}" />
+		<p th:text="'Credit card number: ' + ${paymentResponse.paymentCard.number}" />
+	</div>
+	<h2>Booking IDs</h2>
+	<div>
+		<p th:text="'Booking ID: ' + ${paymentResponse.bookingId}" />
+		<p th:text="'Car booking ID: ' + ${paymentResponse.carBookingId}" />
+		<p th:text="'Park entrance booking ID: ' + ${paymentResponse.parkEntranceBookingId}" />
+	</div>
+    <a href="/booking">Submit another booking</a>
+    <a href="/booking/payment">Get payment information</a>
+</body>
+</html>
